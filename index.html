@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>JS Handson 3</h1>
+<hr size="5px" color="brown">
+
+      <ol>
+        <li><h2>Problem:
+          You are given a string (STR) of length N, consisting of only the lower case English alphabet.
+          Your task is to remove all the duplicate occurrences of characters in the string.
+          
+           
+          </li></h2>
+        <h4>Answer:</h4>
+        <pre>
+        function removeDuplicate(STR,N){
+    var index = 0;
+    for (var i = 0; i &lt; N; i++){
+        var j;
+            for (j = 0; j &lt; i; j++)
+            {
+                if (STR[i] == STR[j])
+                {
+                    break;
+                }
+            }
+            if (j == i)
+            {
+                STR[index++] = STR[i];
+            }
+        }
+    
+    return STR.join("").slice(STR, index);
+    
+}
+</pre>
+   <hr />  
+   
+
+
+   <li><h2>Problem:
+    You are given a string (STR) of length N, you have to print the count of all alphabet.(using maps)
+    
+    Input:
+    abcadeecfb
+    
+   
+     
+    
+
+</li></h2>
+        <h4>Answer:</h4>
+        <pre>
+          function countChrOccurence () {
+            let charMap = new Map();
+            const count = 0;
+            let str='abcadeecfb'
+             for (const key of str) {
+              charMap.set(key,count); 
+           
+             for (const key of str) {
+               let count = charMap.get(key);
+               charMap.set(key, count + 1);
+             }
+           
+           
+             for (const [key,value] of charMap) {
+               console.log(key,value);
+             }
+           
+           }  
+           countChrOccurence ('abcadeecfb')
+           
+
+           Output:
+           a 2
+           b 2
+           c 2
+           d 1
+           e 2
+           f 1
+</pre>
+   <hr /> 
+
+
+
+  
+      </ol>
+    
+    
+  </body>
+</html>
